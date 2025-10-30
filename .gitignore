@@ -5,3 +5,4 @@ config/.env
 *.bin
 *.gz
 
+GoogleNews/archive.zip
