@@ -1,0 +1,203 @@
+<style>
+.lx-highlight { position: relative; border-radius:3px; padding:1px 2px;}
+.lx-highlight .lx-tooltip {
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+  background: #333;
+  color: #fff;
+  text-align: left;
+  border-radius: 4px;
+  padding: 6px 8px;
+  position: absolute;
+  z-index: 1000;
+  bottom: 125%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 12px;
+  max-width: 240px;
+  white-space: normal;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+.lx-highlight:hover .lx-tooltip { visibility: visible; opacity:1; }
+.lx-animated-wrapper { max-width: 100%; font-family: Arial, sans-serif; }
+.lx-controls {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 8px;
+  padding: 12px; margin-bottom: 16px;
+}
+.lx-button-row {
+  display: flex; justify-content: center; gap: 8px; margin-bottom: 12px;
+}
+.lx-control-btn {
+  background: #4285f4; color: white; border: none; border-radius: 4px;
+  padding: 8px 16px; cursor: pointer; font-size: 13px; font-weight: 500;
+  transition: background-color 0.2s;
+}
+.lx-control-btn:hover { background: #3367d6; }
+.lx-progress-container {
+  margin-bottom: 8px;
+}
+.lx-progress-slider {
+  width: 100%; margin: 0; appearance: none; height: 6px;
+  background: #ddd; border-radius: 3px; outline: none;
+}
+.lx-progress-slider::-webkit-slider-thumb {
+  appearance: none; width: 18px; height: 18px; background: #4285f4;
+  border-radius: 50%; cursor: pointer;
+}
+.lx-progress-slider::-moz-range-thumb {
+  width: 18px; height: 18px; background: #4285f4; border-radius: 50%;
+  cursor: pointer; border: none;
+}
+.lx-status-text {
+  text-align: center; font-size: 12px; color: #666; margin-top: 4px;
+}
+.lx-text-window {
+  font-family: monospace; white-space: pre-wrap; border: 1px solid #90caf9;
+  padding: 12px; max-height: 260px; overflow-y: auto; margin-bottom: 12px;
+  line-height: 1.6;
+}
+.lx-attributes-panel {
+  background: #fafafa; border: 1px solid #90caf9; border-radius: 6px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px;
+}
+.lx-current-highlight {
+  border-bottom: 4px solid #ff4444;
+  font-weight: bold;
+  animation: lx-pulse 1s ease-in-out;
+}
+@keyframes lx-pulse {
+  0% { text-decoration-color: #ff4444; }
+  50% { text-decoration-color: #ff0000; }
+  100% { text-decoration-color: #ff4444; }
+}
+.lx-legend {
+  font-size: 12px; margin-bottom: 8px;
+  padding-bottom: 8px; border-bottom: 1px solid #e0e0e0;
+}
+.lx-label {
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 3px;
+  margin-right: 4px;
+  color: #000;
+}
+.lx-attr-key {
+  font-weight: 600;
+  color: #1565c0;
+  letter-spacing: 0.3px;
+}
+.lx-attr-value {
+  font-weight: 400;
+  opacity: 0.85;
+  letter-spacing: 0.2px;
+}
+
+/* Add optimizations with larger fonts and better readability for GIFs */
+.lx-gif-optimized .lx-text-window { font-size: 16px; line-height: 1.8; }
+.lx-gif-optimized .lx-attributes-panel { font-size: 15px; }
+.lx-gif-optimized .lx-current-highlight { text-decoration-thickness: 4px; }
+</style>
+    <div class="lx-animated-wrapper lx-gif-optimized">
+      <div class="lx-attributes-panel">
+        <div class="lx-legend">Highlights Legend: <span class="lx-label" style="background-color:#D2E3FC;">example</span> <span class="lx-label" style="background-color:#C8E6C9;">key_concept</span> <span class="lx-label" style="background-color:#FEF0C3;">practical_insight</span></div>
+        <div id="attributesContainer"></div>
+      </div>
+      <div class="lx-text-window" id="textWindow">
+        # LECTURE ANALYSIS: Nominal Data
+## Video Segment: 84:03 - 88:01
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight lx-current-highlight" data-idx="0" style="background-color:#C8E6C9;">Nominal values can only distinguish one object from another. Examples: Zip code, Political preferences, Genres.</span> How to analyze?
+
+[TRANSCRIPT - 00:00:00]
+<span class="lx-highlight" data-idx="1" style="background-color:#D2E3FC;">like zip code, like your name, right? My name is Shin Chen. I can only find the person who having the same name with me or not the same name.</span> By the way, that&#x27;s before 2013. Right now we have different way to sort the name. But now we just thinking about from the meaning part. When we sort them is because they&#x27;ve been used for computer. But right now we&#x27;re talking about meaning. Can I sort my name with our name? Even though Yishin starts from Y, Didier starts from D, but if I say, oh, why is later than B? From the meaning, it actually looks weird. Okay. So then name right here is just like, uh, the zip code is also the same. It&#x27;s like, uh, you know this, this is region, there&#x27;s another region. But some people will say, but professor, I actually can find some other information to sort the zip code. <span class="lx-highlight" data-idx="2" style="background-color:#FEF0C3;">For example, zip code I am having some one like if they are from 90201, which means they are more, uh, the company, they actually start earlier. If that is the cases, you need to find another feature to indicate that or actually convert that feature into something.</span> <span class="lx-highlight" data-idx="3" style="background-color:#FEF0C3;">Nominal data again. If you try to do, uh, the nominal data you need to set it as categorical data. Okay. English. And usually they will only give you two choice. One is called categorical data. One another is called number.</span> <span class="lx-highlight" data-idx="4" style="background-color:#FEF0C3;">So right now the vehicle is look like 0, not 30013. It look like number, but you shouldn&#x27;t set it as number. You shouldn&#x27;t set it as numerical data. You need to set them as string or you set them as nominal data, depends on what kind of thing. So if you do not find categorical data, set them as a string. Because string can also only do equal and not equal.</span> And so how to analyze them? <span class="lx-highlight" data-idx="5" style="background-color:#FEF0C3;">For example, you can only do equal and not equal.</span> But from a population, if you want to say, oh, I have so many zip code data, what can I do? We can have some distribution. <span class="lx-highlight" data-idx="6" style="background-color:#C8E6C9;">So you can find a distribution. Or you can find who are the county have the majority of the people. Something like that, mode.</span> So you can have something like that. <span class="lx-highlight" data-idx="7" style="background-color:#D2E3FC;">So for example, like this one, uh, attribute. And why axis, what will be the number of the people involved with this zip code. So for example, this one are 90007. This one are 90201. So for example, this is attribute. And the mode will be, oh, see right here is the one have the biggest number right here. So that is the mode.</span> Okay. So nominal data you can do away like that, analyze it. <span class="lx-highlight" data-idx="8" style="background-color:#FEF0C3;">And the distribution is also one very important way for us to, uh, understand our data. When you try to do the, uh, final project at the very beginning, you might need to do a lot of distribution.</span>
+
+[SLIDE DESCRIPTION]
+Ordinal
+
+[SLIDE DESCRIPTION]
+<span class="lx-highlight" data-idx="9" style="background-color:#C8E6C9;">Ordinal values can help to order objects.</span> Examples: How to analyze?
+
+      </div>
+      <div class="lx-controls">
+        <div class="lx-button-row">
+          <button class="lx-control-btn" onclick="playPause()">▶️ Play</button>
+          <button class="lx-control-btn" onclick="prevExtraction()">⏮ Previous</button>
+          <button class="lx-control-btn" onclick="nextExtraction()">⏭ Next</button>
+        </div>
+        <div class="lx-progress-container">
+          <input type="range" id="progressSlider" class="lx-progress-slider"
+                 min="0" max="9" value="0"
+                 onchange="jumpToExtraction(this.value)">
+        </div>
+        <div class="lx-status-text">
+          Entity <span id="entityInfo">1/10</span> |
+          Pos <span id="posInfo">[86-197]</span>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      (function() {
+        const extractions = [{"index": 0, "class": "key_concept", "text": "Nominal values can only distinguish one object from another. Examples: Zip code, Political preferences, Genres.", "color": "#C8E6C9", "startPos": 86, "endPos": 197, "beforeText": "# LECTURE ANALYSIS: Nominal Data\n## Video Segment: 84:03 - 88:01\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Nominal values can only distinguish one object from another. Examples: Zip code, Political preferences, Genres.", "afterText": " How to analyze?\n\n[TRANSCRIPT - 00:00:00]\nlike zip code, like your name, right? My name is Shin Chen. I can only find the person who having the same n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Nominal Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Values that can only distinguish one object from another.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Data that can be named or labeled but cannot be ordered or measured numerically. Think of categories like &#x27;red&#x27; or &#x27;blue&#x27;.</span>}</div>"}, {"index": 1, "class": "example", "text": "like zip code, like your name, right? My name is Shin Chen. I can only find the person who having the same name with me or not the same name.", "color": "#D2E3FC", "startPos": 239, "endPos": 380, "beforeText": "inal values can only distinguish one object from another. Examples: Zip code, Political preferences, Genres. How to analyze?\n\n[TRANSCRIPT - 00:00:00]\n", "extractionText": "like zip code, like your name, right? My name is Shin Chen. I can only find the person who having the same name with me or not the same name.", "afterText": " By the way, that&#x27;s before 2013. Right now we have different way to sort the name. But now we just thinking about from the meaning part. When we sort ", "attributesHtml": "<div><strong>class:</strong> example</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Nominal Data</span>, <span class=\"lx-attr-key\">summary_of_example</span>: <span class=\"lx-attr-value\">Names and zip codes are examples of nominal data because they are used to identify and distinguish individuals or locations, not for mathematical operations.</span>}</div>"}, {"index": 2, "class": "practical_insight", "text": "For example, zip code I am having some one like if they are from 90201, which means they are more, uh, the company, they actually start earlier. If that is the cases, you need to find another feature to indicate that or actually convert that feature into something.", "color": "#FEF0C3", "startPos": 1048, "endPos": 1313, "beforeText": "is, this is region, there&#x27;s another region. But some people will say, but professor, I actually can find some other information to sort the zip code. ", "extractionText": "For example, zip code I am having some one like if they are from 90201, which means they are more, uh, the company, they actually start earlier. If that is the cases, you need to find another feature to indicate that or actually convert that feature into something.", "afterText": " Nominal data again. If you try to do, uh, the nominal data you need to set it as categorical data. Okay. English. And usually they will only give you", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Data Transformation</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Nominal Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">If a nominal feature (like zip code) appears to have an order or numerical meaning, it might need to be converted or a new feature created to represent its true categorical nature.</span>}</div>"}, {"index": 3, "class": "practical_insight", "text": "Nominal data again. If you try to do, uh, the nominal data you need to set it as categorical data. Okay. English. And usually they will only give you two choice. One is called categorical data. One another is called number.", "color": "#FEF0C3", "startPos": 1314, "endPos": 1537, "beforeText": "they actually start earlier. If that is the cases, you need to find another feature to indicate that or actually convert that feature into something. ", "extractionText": "Nominal data again. If you try to do, uh, the nominal data you need to set it as categorical data. Okay. English. And usually they will only give you two choice. One is called categorical data. One another is called number.", "afterText": " So right now the vehicle is look like 0, not 30013. It look like number, but you shouldn&#x27;t set it as number. You shouldn&#x27;t set it as numerical data. ", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Data Type Assignment</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Nominal Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Nominal data should be treated as categorical data, not numerical, even if it looks like a number.</span>}</div>"}, {"index": 4, "class": "practical_insight", "text": "So right now the vehicle is look like 0, not 30013. It look like number, but you shouldn't set it as number. You shouldn't set it as numerical data. You need to set them as string or you set them as nominal data, depends on what kind of thing. So if you do not find categorical data, set them as a string. Because string can also only do equal and not equal.", "color": "#FEF0C3", "startPos": 1538, "endPos": 1896, "beforeText": " it as categorical data. Okay. English. And usually they will only give you two choice. One is called categorical data. One another is called number. ", "extractionText": "So right now the vehicle is look like 0, not 30013. It look like number, but you shouldn&#x27;t set it as number. You shouldn&#x27;t set it as numerical data. You need to set them as string or you set them as nominal data, depends on what kind of thing. So if you do not find categorical data, set them as a string. Because string can also only do equal and not equal.", "afterText": " And so how to analyze them? For example, you can only do equal and not equal. But from a population, if you want to say, oh, I have so many zip code ", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Data Type Assignment</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Nominal Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Represent nominal data as strings or a specific nominal/categorical type in your system, as these types only support equality checks, reflecting the nature of nominal data.</span>}</div>"}, {"index": 5, "class": "practical_insight", "text": "For example, you can only do equal and not equal.", "color": "#FEF0C3", "startPos": 1925, "endPos": 1974, "beforeText": "thing. So if you do not find categorical data, set them as a string. Because string can also only do equal and not equal. And so how to analyze them? ", "extractionText": "For example, you can only do equal and not equal.", "afterText": " But from a population, if you want to say, oh, I have so many zip code data, what can I do? We can have some distribution. So you can find a distribu", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Data Analysis Limitation</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Nominal Data</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">The primary operations for analyzing nominal data are checking for equality or inequality.</span>}</div>"}, {"index": 6, "class": "key_concept", "text": "So you can find a distribution. Or you can find who are the county have the majority of the people. Something like that, mode.", "color": "#C8E6C9", "startPos": 2098, "endPos": 2224, "beforeText": "ly do equal and not equal. But from a population, if you want to say, oh, I have so many zip code data, what can I do? We can have some distribution. ", "extractionText": "So you can find a distribution. Or you can find who are the county have the majority of the people. Something like that, mode.", "afterText": " So you can have something like that. So for example, like this one, uh, attribute. And why axis, what will be the number of the people involved with ", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Mode and Distribution</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Mode is the value that appears most frequently in a data set. Distribution refers to how data is spread or arranged.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Mode tells you the most common item in a list. Distribution shows you how often different items appear.</span>}</div>"}, {"index": 7, "class": "example", "text": "So for example, like this one, uh, attribute. And why axis, what will be the number of the people involved with this zip code. So for example, this one are 90007. This one are 90201. So for example, this is attribute. And the mode will be, oh, see right here is the one have the biggest number right here. So that is the mode.", "color": "#D2E3FC", "startPos": 2262, "endPos": 2588, "beforeText": "d a distribution. Or you can find who are the county have the majority of the people. Something like that, mode. So you can have something like that. ", "extractionText": "So for example, like this one, uh, attribute. And why axis, what will be the number of the people involved with this zip code. So for example, this one are 90007. This one are 90201. So for example, this is attribute. And the mode will be, oh, see right here is the one have the biggest number right here. So that is the mode.", "afterText": " Okay. So nominal data you can do away like that, analyze it. And the distribution is also one very important way for us to, uh, understand our data. ", "attributesHtml": "<div><strong>class:</strong> example</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Mode</span>, <span class=\"lx-attr-key\">summary_of_example</span>: <span class=\"lx-attr-value\">Illustrates finding the mode by showing zip codes on the x-axis and the number of people on the y-axis, identifying the zip code with the highest number of people as the mode.</span>}</div>"}, {"index": 8, "class": "practical_insight", "text": "And the distribution is also one very important way for us to, uh, understand our data. When you try to do the, uh, final project at the very beginning, you might need to do a lot of distribution.", "color": "#FEF0C3", "startPos": 2650, "endPos": 2846, "beforeText": ", oh, see right here is the one have the biggest number right here. So that is the mode. Okay. So nominal data you can do away like that, analyze it. ", "extractionText": "And the distribution is also one very important way for us to, uh, understand our data. When you try to do the, uh, final project at the very beginning, you might need to do a lot of distribution.", "afterText": "\n\n[SLIDE DESCRIPTION]\nOrdinal\n\n[SLIDE DESCRIPTION]\nOrdinal values can help to order objects. Examples: How to analyze?\n", "attributesHtml": "<div><strong>class:</strong> practical_insight</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">insight_type</span>: <span class=\"lx-attr-value\">Critical Importance</span>, <span class=\"lx-attr-key\">related_concept</span>: <span class=\"lx-attr-value\">Data Distribution</span>, <span class=\"lx-attr-key\">summary_of_insight</span>: <span class=\"lx-attr-value\">Understanding data distribution is crucial for initial data analysis, especially in projects.</span>}</div>"}, {"index": 9, "class": "key_concept", "text": "Ordinal values can help to order objects.", "color": "#C8E6C9", "startPos": 2897, "endPos": 2938, "beforeText": "try to do the, uh, final project at the very beginning, you might need to do a lot of distribution.\n\n[SLIDE DESCRIPTION]\nOrdinal\n\n[SLIDE DESCRIPTION]\n", "extractionText": "Ordinal values can help to order objects.", "afterText": " Examples: How to analyze?\n", "attributesHtml": "<div><strong>class:</strong> key_concept</div><div><strong>attributes:</strong> {<span class=\"lx-attr-key\">concept_name</span>: <span class=\"lx-attr-value\">Ordinal Data</span>, <span class=\"lx-attr-key\">definition</span>: <span class=\"lx-attr-value\">Ordinal values can help to order objects.</span>, <span class=\"lx-attr-key\">difficulty_rating</span>: <span class=\"lx-attr-value\">Beginner</span>, <span class=\"lx-attr-key\">simplified_explanation</span>: <span class=\"lx-attr-value\">Ordinal data represents categories that have a natural order, like &#x27;small&#x27;, &#x27;medium&#x27;, &#x27;large&#x27;.</span>}</div>"}];
+        let currentIndex = 0;
+        let isPlaying = false;
+        let animationInterval = null;
+        let animationSpeed = 1.0;
+
+        function updateDisplay() {
+          const extraction = extractions[currentIndex];
+          if (!extraction) return;
+
+          document.getElementById('attributesContainer').innerHTML = extraction.attributesHtml;
+          document.getElementById('entityInfo').textContent = (currentIndex + 1) + '/' + extractions.length;
+          document.getElementById('posInfo').textContent = '[' + extraction.startPos + '-' + extraction.endPos + ']';
+          document.getElementById('progressSlider').value = currentIndex;
+
+          const playBtn = document.querySelector('.lx-control-btn');
+          if (playBtn) playBtn.textContent = isPlaying ? '⏸ Pause' : '▶️ Play';
+
+          const prevHighlight = document.querySelector('.lx-text-window .lx-current-highlight');
+          if (prevHighlight) prevHighlight.classList.remove('lx-current-highlight');
+          const currentSpan = document.querySelector('.lx-text-window span[data-idx="' + currentIndex + '"]');
+          if (currentSpan) {
+            currentSpan.classList.add('lx-current-highlight');
+            currentSpan.scrollIntoView({block: 'center', behavior: 'smooth'});
+          }
+        }
+
+        function nextExtraction() {
+          currentIndex = (currentIndex + 1) % extractions.length;
+          updateDisplay();
+        }
+
+        function prevExtraction() {
+          currentIndex = (currentIndex - 1 + extractions.length) % extractions.length;
+          updateDisplay();
+        }
+
+        function jumpToExtraction(index) {
+          currentIndex = parseInt(index);
+          updateDisplay();
+        }
+
+        function playPause() {
+          if (isPlaying) {
+            clearInterval(animationInterval);
+            isPlaying = false;
+          } else {
+            animationInterval = setInterval(nextExtraction, animationSpeed * 1000);
+            isPlaying = true;
+          }
+          updateDisplay();
+        }
+
+        window.playPause = playPause;
+        window.nextExtraction = nextExtraction;
+        window.prevExtraction = prevExtraction;
+        window.jumpToExtraction = jumpToExtraction;
+
+        updateDisplay();
+      })();
+    </script>

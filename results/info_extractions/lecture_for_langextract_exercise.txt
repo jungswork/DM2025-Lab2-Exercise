@@ -1,0 +1,14 @@
+# LECTURE ANALYSIS: Nominal Data
+## Video Segment: 84:03 - 88:01
+
+[SLIDE DESCRIPTION]
+Nominal values can only distinguish one object from another. Examples: Zip code, Political preferences, Genres. How to analyze?
+
+[TRANSCRIPT - 00:00:00]
+like zip code, like your name, right? My name is Shin Chen. I can only find the person who having the same name with me or not the same name. By the way, that's before 2013. Right now we have different way to sort the name. But now we just thinking about from the meaning part. When we sort them is because they've been used for computer. But right now we're talking about meaning. Can I sort my name with our name? Even though Yishin starts from Y, Didier starts from D, but if I say, oh, why is later than B? From the meaning, it actually looks weird. Okay. So then name right here is just like, uh, the zip code is also the same. It's like, uh, you know this, this is region, there's another region. But some people will say, but professor, I actually can find some other information to sort the zip code. For example, zip code I am having some one like if they are from 90201, which means they are more, uh, the company, they actually start earlier. If that is the cases, you need to find another feature to indicate that or actually convert that feature into something. Nominal data again. If you try to do, uh, the nominal data you need to set it as categorical data. Okay. English. And usually they will only give you two choice. One is called categorical data. One another is called number. So right now the vehicle is look like 0, not 30013. It look like number, but you shouldn't set it as number. You shouldn't set it as numerical data. You need to set them as string or you set them as nominal data, depends on what kind of thing. So if you do not find categorical data, set them as a string. Because string can also only do equal and not equal. And so how to analyze them? For example, you can only do equal and not equal. But from a population, if you want to say, oh, I have so many zip code data, what can I do? We can have some distribution. So you can find a distribution. Or you can find who are the county have the majority of the people. Something like that, mode. So you can have something like that. So for example, like this one, uh, attribute. And why axis, what will be the number of the people involved with this zip code. So for example, this one are 90007. This one are 90201. So for example, this is attribute. And the mode will be, oh, see right here is the one have the biggest number right here. So that is the mode. Okay. So nominal data you can do away like that, analyze it. And the distribution is also one very important way for us to, uh, understand our data. When you try to do the, uh, final project at the very beginning, you might need to do a lot of distribution.
+
+[SLIDE DESCRIPTION]
+Ordinal
+
+[SLIDE DESCRIPTION]
+Ordinal values can help to order objects. Examples: How to analyze?
